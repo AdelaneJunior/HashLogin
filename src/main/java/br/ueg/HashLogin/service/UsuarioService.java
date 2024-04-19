@@ -16,6 +16,7 @@ public class UsuarioService {
     private UsuarioRepository repository;
 
     private void criptografarSenha(Usuario usuario) {
+
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
         String senhaCodificada = bCryptPasswordEncoder.encode(usuario.getSenha());
         usuario.setSenha(senhaCodificada);
